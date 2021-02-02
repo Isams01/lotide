@@ -8,4 +8,4 @@ const assertEqual = function(actual, expected) {
 
 const tail = function(array) {
   return array.splice(1);
-}
+};

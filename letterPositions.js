@@ -20,7 +20,6 @@ const assertArraysEqual = function(arr1, arr2) {
 
 const letterPositions = function(sentence) {
   const results = {};
-  let  noSpace = sentence.replace(/\s/g, ''); 
   for(let i = 0; i < sentence.length; i++){
     if(sentence[i] != ' '){
       if(results[sentence[i]]){

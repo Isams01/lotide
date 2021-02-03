@@ -9,15 +9,12 @@ const assertEqual = function(actual, expected) {
 const countLetters = function(letters) {
   let result = {};
   let noSpace = letters.replace(/\s/g, '');
-  for(let i = 0; i < letters.length; i++){
-    if(result[letters[i]]){
-      result[letters[i]] += 1;
+  for(let i = 0; i < noSpace.length; i++){
+    if(result[noSpace[i]]){
+      result[noSpace[i]] += 1;
     } else {
-      result[letters[i]] = 1;
+      result[noSpace[i]] = 1;
     }
   }
   return result;
 };
-
-
-console.log(countLetters('hhhb bbc'));

@@ -19,12 +19,12 @@ const asserArraysEqual = function(arr1, arr2) {
 };
 
 const without = function(arr, removeVars) {
-  let newArr = []
-  for (let i = 0; i < arr.length; i++){
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
     if (!removeVars.includes(arr[i])) {
       newArr.push(arr[i]);
     }
   }
   return newArr;
-}
+};
 

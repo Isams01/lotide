@@ -10,25 +10,28 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+const assertArraysEqual = function(arr1, arr2) {
+  if(eqArrays(arr1,arr2)){
+    console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${arr1} !== ${arr2}`);
   }
 };
 
 const letterPositions = function(sentence) {
   const results = {};
   let  noSpace = sentence.replace(/\s/g, ''); 
-  for(let i = 0; i < noSpace.length; i++){
-    if(result[noSpace[i]]){
-      result[noSpace[i]].push(i);
-    } else {
-      result[noSpace[i]] = [i];
+  for(let i = 0; i < sentence.length; i++){
+    if(sentence[i] != ' '){
+      if(results[sentence[i]]){
+        results[sentence[i]].push(i);
+      } else {
+        results[sentence[i]] = [i];
+      }
     }
   }
   return results;
 };
 
-console.log(letterPositions('hello world'));
+
+

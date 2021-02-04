@@ -22,14 +22,12 @@ const eqArrays = function(arr1, arr2) {
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
-  const objectLength1 = Object.keys(object1).length;
-  const objectLength2 = Object.keys(object2).length;
-  if (objectLength1 === objectLength2) {
+  if (Object.keys(object1).length === Object.keys(object2).length) {
     // iterate through keys in one object
     for (const key in object1) {
       // first check if its an array
-      if (Array.isArray(object1[key])) {
-        if (!eqArrays(object1[key],object2[key])) {
+      if ( Array.isArray(object1[key]) ) {
+        if ( !eqArrays(object1[key], object2[key]) ) {
           return false;
         }
       } else {

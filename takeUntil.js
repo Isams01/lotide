@@ -20,8 +20,15 @@ const assertArraysEqual = function(arr1, arr2) {
 
 
 const takeUntil = function(array, callback) {
-  
-
+  let result = [];
+  for(element of array){
+    if(callback(element)){
+      return result;
+    } else {
+      result.push(element);
+    }
+  }
+  return result;
 }
 
 const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
@@ -37,3 +44,4 @@ assertArraysEqual(results2, ["I've", "been", "to", "Hollywood"]);
 
 const testArr = ['a','bb','ccc','dddd','eeeee']
 assertArraysEqual(takeUntil(testArr, letters => letters.length > 3), ['a','bb','ccc']);
+assertArraysEqual(takeUntil(testArr, letters => letters.length > 10), ['a','bb','ccc','dddd','eeeee']);

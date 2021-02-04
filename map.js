@@ -33,8 +33,18 @@ const map = (array, cb) => {
 };
 
 const words = ["ground", "control", "to", "major", "tom"];
+const wordCount = ['aaa', 'bbbb', 'cccc']
 
 const results1 = map(words, word => word[0]);
 console.log(results1);
+
+assertArraysEqual(map(wordCount, words => words.length), [3,4,4])
+assertArraysEqual(map(wordCount, words => {
+  if(words === 'aaa'){
+    return 111;
+  } else {
+    return words
+  }
+}), [111,'bbbb','cccc']);
 
 

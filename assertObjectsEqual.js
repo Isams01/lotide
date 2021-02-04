@@ -26,8 +26,18 @@ const eqObjects = function(object1, object2) {
 const assertObjectsEqual = function(actual, expected) {
   // Implement me!
   if(eqObjects(actual,expected)){
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
+    console.log(`✅✅✅ Assertion Passed: ${JSON.stringify(actual)} === ${JSON.stringify(expected)}`);
   } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
+    console.log(`🛑🛑🛑 Assertion Failed: ${JSON.stringify(actual)} !== ${JSON.stringify(expected)}`);
   }
 };
+
+const ab = {a:1, b:2};
+const ba = {b:2, a:1};
+
+const abc = {a:1, b:2, c:3};
+const cba = {c: '3', b:2, a:1};
+
+assertObjectsEqual(ab,ba);
+assertObjectsEqual(abc,cba);
+

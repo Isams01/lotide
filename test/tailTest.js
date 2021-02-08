@@ -1,5 +1,12 @@
 const tail = require('../tail');
 const assertEqual = require('../assertEqual');
+const chai = require('chai');
+const assert = chai.assert;
 
-assertEqual(tail([1,2,3])[0],2)
-assertEqual(tail([1,2,3])[1],3)
+describe('tail', () => {
+  it('should return [2,3] when given [1,2,3]', () => {
+    assert.deepEqual(tail([1,2,3]),[2,3]);
+  })
+});
+
+

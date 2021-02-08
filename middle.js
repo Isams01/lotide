@@ -32,6 +32,8 @@ const middle = function(array){
   }
 }
 
+module.exports = middle;
+
 
 middle([0]);            // 0
 middle([0,1]);          // 1

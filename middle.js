@@ -34,13 +34,3 @@ const middle = function(array){
 
 module.exports = middle;
 
-
-middle([0]);            // 0
-middle([0,1]);          // 1
-console.log(middle([0,1,2]));        // 1
-console.log(middle([0,1,2,3]));      // 2
-console.log(middle([0,1,2,3,4]));    // 2
-
-asserArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3,4]);
-asserArraysEqual(middle([1, 2, 3, 4, 5, 6, 7]), [4]);
-asserArraysEqual(middle([1, 2]), []);

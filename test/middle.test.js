@@ -13,5 +13,7 @@ describe('middle.js', () => {
   it('should return an empty array if the 2 or less numbers are given', () => {
     assert.isTrue(eqArray(middle([1, 2]),[]));
   })
-
+  it('should return an empty array if the 2 or less numbers are given', () => {
+    assert.isTrue(eqArray(middle([0]),[]));
+  })
 });

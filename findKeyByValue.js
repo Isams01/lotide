@@ -1,11 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 const findKeyByValue = function(object, value) {
   for (const key in object) {
     if (object[key] === value) {
@@ -13,3 +5,7 @@ const findKeyByValue = function(object, value) {
     }
   }
 };
+
+console.log(findKeyByValue({a:3, b:2}, 2));
+
+module.exports = findKeyByValue;

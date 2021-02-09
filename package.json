@@ -1,6 +1,6 @@
 {
   "name": "@isamuito/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a mini clone of lodash",
   "main": "index.js",
   "directories": {

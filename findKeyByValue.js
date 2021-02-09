@@ -6,6 +6,5 @@ const findKeyByValue = function(object, value) {
   }
 };
 
-console.log(findKeyByValue({a:3, b:2}, 2));
 
 module.exports = findKeyByValue;
